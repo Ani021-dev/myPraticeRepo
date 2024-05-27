@@ -16,14 +16,14 @@ public class SetMatrixZero {
 
         for(int i = 0; i < n; i++){
             if(matrix[0][i] == 0){
-                firstCol = true;
+                firstRow = true;
                 break;
             }
         }
 
         for(int i = 0; i < n; i++){
             if(matrix[i][0] == 0){
-                firstRow = true;
+                firstCol = true;
                 break;
             }
         }
@@ -44,13 +44,13 @@ public class SetMatrixZero {
             }
         }
 
-        if(firstCol){
+        if(firstRow){
             for(int i = 0; i < n; i++){
                 matrix[0][i] = 0;
             }
         }
 
-        if(firstRow){
+        if(firstCol){
             for(int i = 0; i < m; i++){
                 matrix[i][0] = 0;
             }
