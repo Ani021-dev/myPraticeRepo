@@ -1,5 +1,7 @@
 package src;
 
+import java.util.Arrays;
+
 public class MedianSortedArray {
     public static void main(String[] args) {
         int[] arr1 = {1, 2}, arr2 = {3, 4};

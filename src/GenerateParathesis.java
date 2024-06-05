@@ -1,12 +1,14 @@
 package src;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class GenerateParathesis {
     public static void main(String[] ar) {
         int n = 4;
-
+        int[] nu = new int[4];
         System.out.println(generatePara(n));
     }
 

@@ -23,7 +23,7 @@ public class MaxTargetSumInArray {
         return max;
     }
 
-    public static List<Integer> getSubArray(int[] arr) {
+    public static List<List<Integer>> getSubArray(int[] arr) {
         int max = Integer.MIN_VALUE, sum = 0;
         List<List<Integer>> list = new ArrayList<>();
         List<Integer> ll = new ArrayList<>();
@@ -34,11 +34,11 @@ public class MaxTargetSumInArray {
             if (sum > 0) {
                 ll.add(i);
             } else {
+                list.add(ll);
                 ll.clear();
                 sum = 0;
             }
-            list.add(ll);
         }
-        return list.get(list.size() - 1);
+        return list;
     }
 }
