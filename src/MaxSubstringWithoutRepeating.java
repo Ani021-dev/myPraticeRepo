@@ -10,7 +10,7 @@ public class MaxSubstringWithoutRepeating {
     }
 
     public static int getMaxLength(String s) {
-        int left = 0, n = s.length(), firstApp = 0, max = 0;
+        int left = 0, n = s.length(), firstApp, max = 0;
 
         for (int i = 0; i < n; i++) {
             firstApp = s.indexOf(s.charAt(i), left);
@@ -23,18 +23,17 @@ public class MaxSubstringWithoutRepeating {
     }
 
     public static StringBuilder getMaxSubstring(String s) {
-        int left = 0, n = s.length(), firstApp = 0;
-        StringBuilder s1 = new StringBuilder();
-
+        int left = 0, n = s.length(), firstApp;
+        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < n; i++) {
             firstApp = s.indexOf(s.charAt(i), left);
-            if (firstApp != i) {
-                if(s1.length() < (i - left + 1)){
-                    s1 = new StringBuilder(s.substring(left, i));
+            if(firstApp != i){
+                if(sb.length() < (i - left + 1)){
+                    sb = new StringBuilder(s.substring(left, i));
                 }
                 left = firstApp + 1;
             }
         }
-        return s1;
+        return sb;
     }
 }
