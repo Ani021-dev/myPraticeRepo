@@ -1,20 +1,20 @@
 package src;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
 public class GetMaxPrefix {
     public static void main(String[] args) {
-        String[] ar = {"flower", "flight", "flow"};
-        System.out.println(getPrefix(ar));
+        String[] strs = {"flower", "flight", "flow"};
+
+        System.out.println(getPrefix(strs));
     }
 
-    public static String getPrefix(String[] ar) {
-        if (ar == null || ar.length == 0) return "";
-        String prefix = ar[0];
-        for (String s : ar) {
-            while (s.indexOf(prefix) != 0) {
+    public static String getPrefix(String[] strs) {
+        if (strs == null || strs.length == 0)
+            return "";
+
+        String prefix = strs[0];
+
+        for (String str : strs) {
+            while(str.indexOf(prefix) != 0){
                 prefix = prefix.substring(0, prefix.length() - 1);
             }
         }

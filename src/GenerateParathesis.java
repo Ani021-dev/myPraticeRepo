@@ -1,32 +1,30 @@
 package src;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 public class GenerateParathesis {
     public static void main(String[] ar) {
-        int n = 4;
-        int[] nu = new int[4];
-        System.out.println(generatePara(n));
+        int target = 4;
+
+        System.out.println(generateParenthesis(target));
     }
 
-    public static List<String> generatePara(int n) {
+    public static List<String> generateParenthesis(int target) {
         List<String> res = new ArrayList<>();
-        backtrack(n, n, new StringBuilder(), res);
+        backtrack(target, target, new StringBuilder(), res);
         return res;
     }
 
     public static void backtrack(int open, int close, StringBuilder sb, List<String> res) {
-        if(close == 0 && open == 0) {
+        if (open == 0 && close == 0) {
             res.add(sb.toString());
             return;
         }
 
-        if(open > close || open < 0) return;
+        if (open > close || open < 0) return;
 
-        if(open > 0){
+        if (open > 0) {
             sb.append('(');
             backtrack(open - 1, close, sb, res);
             sb.deleteCharAt(sb.length() - 1);

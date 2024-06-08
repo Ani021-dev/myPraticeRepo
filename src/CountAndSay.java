@@ -2,7 +2,7 @@ package src;
 
 public class CountAndSay {
     public static void main(String[] args) {
-        int target = 1; //1211 REL (Run-Length Encoding
+        int target = 4; //1211 REL (Run-Length Encoding
 
         System.out.println(getCountAndSay(target));
     }
