@@ -31,7 +31,6 @@ public class ZigZagBinaryTree {
         if (root == null) {
             return res;
         }
-
         Queue<TreeNode> q = new LinkedList<>();
         q.add(root);
 
@@ -42,20 +41,16 @@ public class ZigZagBinaryTree {
                 TreeNode node = q.poll();
 
                 temp.add(node.val);
-
-                if(node.left != null){
+                if (node.left != null)
                     q.add(node.left);
-                }
 
-                if(node.right != null){
+                if (node.right != null)
                     q.add(node.right);
-                }
             }
             res.add(temp);
         }
-
-        for(int i = 0; i < res.size(); i++){
-            if(i % 2 != 0){
+        for (int i = 0; i < res.size(); i++) {
+            if (i % 2 != 0) {
                 Collections.reverse(res.get(i));
             }
         }
