@@ -2,7 +2,7 @@ package src;
 
 public class RearrangeCharacters {
     public static void main(String[] args) {
-        String s = "abcba", target = "abc";
+        String s = "abcbabc", target = "abc";
 
         System.out.println(rearrangeChar(s, target));
     }
@@ -17,15 +17,12 @@ public class RearrangeCharacters {
         for (char c : target.toCharArray()) {
             freqTar[c - 'a']++;
         }
-
         int min = Integer.MAX_VALUE, temp = 0;
-
         for (char c : target.toCharArray()) {
             int x = freqS[c - 'a'];
             int y = freqTar[c - 'a'];
-
-            if(x >= y){
-                min = Math.min(min, x/y);
+            if (x >= y) {
+                min = Math.min(min, x / y);
                 temp++;
             }
         }
