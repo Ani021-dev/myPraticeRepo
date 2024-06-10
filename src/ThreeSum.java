@@ -12,32 +12,33 @@ public class ThreeSum {
     }
 
     public static List<List<Integer>> getThreeSum(int[] arr) {
-        int n = arr.length - 1;
+        int n = arr.length;
         List<List<Integer>> res = new ArrayList<>();
+
         for (int i = 0; i < n && arr[i] <= 0; i++) {
             if (i != 0 && arr[i] == arr[i + 1]) continue;
-            getTwoSum(-arr[i], i + 1, arr, res);
+            getTwoSum(-arr[i], arr, i + 1, res);
         }
         return res;
     }
 
-    public static void getTwoSum(int target, int start, int[] arr, List<List<Integer>> res) {
-        int low = start, high = arr.length - 1;
+    public static void getTwoSum(int target, int[] arr, int start, List<List<Integer>> res) {
+        int low = start, high = arr.length-1;
 
         while (low < high) {
-            if (arr[low] + arr[high] > target) {
+            if ((arr[low] + arr[high]) > target) {
                 low++;
                 continue;
             }
-            if (arr[low] + arr[high] < target) {
+            if ((arr[low] + arr[high]) < target) {
                 high--;
                 continue;
             }
 
             res.add(Arrays.asList(-target, arr[low], arr[high]));
-            low++;high--;
+            low++; high--;
 
-            while(low < high && arr[high] == arr[high + 1])
+            while(low < high && arr[high] == arr[high+1])
                 high--;
         }
     }

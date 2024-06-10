@@ -19,7 +19,7 @@ public class RearrangingStringKDistance {
             ++count[c - 'a'];
         }
 
-        PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> b[0] - a[0]);
+        PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> b[0] - a[0]); //for desc ordering
 
         for (int i = 0; i < 26; ++i) {
             if (count[i] > 0) {

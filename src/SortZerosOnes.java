@@ -9,13 +9,13 @@ public class SortZerosOnes {
     }
 
     public static int[] sortArra(int[] arr) {
-        int low = 0, mid = 0, high = arr.length - 1;
+        int low = 0, mid = 0, n = arr.length, high = n - 1;
 
         while (mid <= high) {
             if (arr[mid] == 0) {
                 swap(arr, low, mid);
-                low++;
                 mid++;
+                low++;
             } else if (arr[mid] == 2) {
                 swap(arr, mid, high);
                 high--;

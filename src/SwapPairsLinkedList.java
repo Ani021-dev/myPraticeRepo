@@ -11,7 +11,7 @@ public class SwapPairsLinkedList {
         }
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         LinkedList list = new LinkedList(2);
         list.next = new LinkedList(1);
         list.next.next = new LinkedList(4);
@@ -19,14 +19,14 @@ public class SwapPairsLinkedList {
 
         LinkedList head = swapPairs(list);
 
-        while(head != null){
+        while (head != null) {
             System.out.print(head.val + " ");
             head = head.next;
         }
     }
 
-    public static LinkedList swapPairs(LinkedList list){
-        if(list == null || list.next == null){
+    public static LinkedList swapPairs(LinkedList list) {
+        if (list == null || list.next == null) {
             return list;
         }
 

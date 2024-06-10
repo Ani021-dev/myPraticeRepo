@@ -8,8 +8,9 @@ public class RepeatedMaxInt {
     }
 
     public static int getMaxRepeatedNum(int[] inp) {
-        int count = 0, ele = 0;
+        int count = 0, ele = -1; int n = inp.length;
 
+        //Moore's Voting Principle
         for (int j : inp) {
             if (count == 0) {
                 count = 1;
@@ -20,12 +21,14 @@ public class RepeatedMaxInt {
                 count--;
             }
         }
+
         int cnt1 = 0;
         for (int j : inp) {
-            if (j == ele) cnt1++;
+            if (j == ele) {
+                cnt1++;
+            }
         }
 
-        if(cnt1 >= (inp.length/2)) return ele;
-        return -1;
+        return cnt1 >= n/2 ? ele : -1;
     }
 }
