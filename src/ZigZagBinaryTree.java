@@ -37,6 +37,7 @@ public class ZigZagBinaryTree {
 
             for (int i = 0; i < n; i++) {
                 TreeNode node = q.poll();
+                assert node != null;
                 temp.add(node.val);
 
                 if (node.left != null)

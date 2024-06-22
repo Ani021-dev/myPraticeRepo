@@ -7,7 +7,7 @@ public class MaxWaterInTank {
     }
 
     public static int getMaxWater(int[] arr) {
-        int l = 0, r = arr.length - 1, sum = 0, min, max = 0;
+        int l = 0, r = arr.length - 1, sum, min, max = 0;
 
         while (l < r) {
             min = Math.min(arr[l], arr[r]);

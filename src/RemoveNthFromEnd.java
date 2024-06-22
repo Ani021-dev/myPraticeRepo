@@ -1,9 +1,8 @@
 package src;
 
-import java.util.List;
 
 public class RemoveNthFromEnd {
-    static class ListNode {
+    public static class ListNode {
         int data;
         ListNode next;
 
@@ -63,7 +62,7 @@ public class RemoveNthFromEnd {
     }
 
     public static ListNode reverseList(ListNode head) {
-        ListNode next = null, current = head, prev = null;
+        ListNode next, current = head, prev = null;
 
         while (current != null) {
             next = current.next;

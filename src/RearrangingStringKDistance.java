@@ -40,6 +40,7 @@ public class RearrangingStringKDistance {
 
             if(dq.size() >= k){
                 int[] pollFirst = dq.pollFirst();
+                assert pollFirst != null;
                 if(pollFirst[0] > 0){
                     pq.offer(pollFirst);
                 }

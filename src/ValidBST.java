@@ -21,11 +21,7 @@ public class ValidBST {
         root.right.left = new TreeNode(7);
         root.right.right = new TreeNode(9);
 
-        System.out.println(isValidBST(root));
-    }
-
-    public static boolean isValidBST(TreeNode root) {
-        return isValidBST(root, null, null);
+        System.out.println(isValidBST(root, null, null));
     }
 
     public static boolean isValidBST(TreeNode root, Integer minVal, Integer maxVal) {

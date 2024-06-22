@@ -1,7 +1,7 @@
 package src;
 
 public class MergeSortedList {
-    static class LinkList {
+    public static class LinkList {
         int val;
         LinkList next;
 

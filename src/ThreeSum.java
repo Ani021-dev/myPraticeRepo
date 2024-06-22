@@ -36,10 +36,10 @@ public class ThreeSum {
             }
 
             res.add(Arrays.asList(-target, arr[low], arr[high]));
-            low++; high--;
+            low++;
 
-            while(low < high && arr[high] == arr[high+1])
-                high--;
+            do high--;
+            while (low < high && arr[high] == arr[high + 1]);
         }
     }
 }

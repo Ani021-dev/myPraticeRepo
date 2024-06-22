@@ -8,7 +8,7 @@ public class MaxScoreSplittingArray {
     }
 
     public static int getMaxScore(String s) {
-        int max = 0, zero, one = 0, n = s.length() -1;
+        int max, zero, one = 0, n = s.length() -1;
 
         zero = s.charAt(0) == '0' ? 1 : 0;
         max = zero;
