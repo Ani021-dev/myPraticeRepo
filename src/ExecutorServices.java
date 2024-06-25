@@ -8,7 +8,7 @@ import java.util.concurrent.*;
 public class ExecutorServices {
     public static void main(String[] ars) {
         List<String> stockSymbol = Arrays.asList("ABC", "XYZ", "UYT", "PSH", "ETC");
-        List<Future> futures = new ArrayList<>();
+        List<Future<Double>> futures = new ArrayList<>();
 
         ExecutorService service = Executors.newFixedThreadPool(2);
 
@@ -37,7 +37,7 @@ public class ExecutorServices {
 
 class StockPricesFetcher implements Callable<Double> {
 
-    private String stockSymbol;
+    private final String stockSymbol;
 
     StockPricesFetcher(String stockSymbol) {
         this.stockSymbol = stockSymbol;

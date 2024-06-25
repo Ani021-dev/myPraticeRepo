@@ -1,4 +1,4 @@
-package src;
+package src.DesignPattern;
 
 abstract class LogProc {
     public static int INFO = 1;
@@ -24,6 +24,7 @@ class Info extends LogProc {
         super(logProc);
     }
 
+    @Override
     public void log(int logLevel, String msg) {
         if (logLevel == INFO) {
             System.out.println("Info Level " + msg);
@@ -38,6 +39,7 @@ class Debug extends LogProc {
         super(logProc);
     }
 
+    @Override
     public void log(int logLevel, String msg) {
         if (logLevel == DEBUG) {
             System.out.println("DEBUG level " + msg);
@@ -53,6 +55,7 @@ class Error extends LogProc {
         super(logProc);
     }
 
+    @Override
     public void log(int logLevel, String msg) {
         if (logLevel == ERROR) {
             System.out.println("Error Level " + msg);

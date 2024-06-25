@@ -1,5 +1,7 @@
 package src;
 
+import java.util.List;
+
 public class LongestPalindromSubstring {
     static int start = 0;
     static int end = 0;
@@ -7,6 +9,7 @@ public class LongestPalindromSubstring {
         String s = "babad";
 
         System.out.println(getLongestPali(s));
+        List<Integer> abc;
     }
 
     public static String getLongestPali(String s) {
