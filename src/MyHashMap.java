@@ -59,10 +59,10 @@ public class MyHashMap<K, V> {
     }
 
     public V get(K key) {
-        int hasCode = key.hashCode() % hashtable.length;
-        Entry node = hashtable[hasCode];
+        int hashCode = key.hashCode() % hashtable.length;
+        Entry node = hashtable[hashCode];
         while (node != null) {
-            if (node.key == key) {
+            if(node.key == key){
                 return (V) node.value;
             }
             node = node.next;

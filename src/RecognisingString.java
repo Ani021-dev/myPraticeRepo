@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class RecognisingString {
     public static void main(String[] args) {
-        String s = "aaab";
+        String s = "aab";
 
         System.out.println(recognizeString(s));
     }

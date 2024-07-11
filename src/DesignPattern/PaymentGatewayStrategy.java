@@ -1,5 +1,6 @@
 package src.DesignPattern;
 
+//Strategy Design Pattern
 public class PaymentGatewayStrategy {
     public static void main(String[] args) {
         Payment paid = new Payment(1576, "ABC colony, ABC, ABC", new UPI());
