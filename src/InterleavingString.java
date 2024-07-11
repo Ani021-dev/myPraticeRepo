@@ -29,7 +29,7 @@ public class InterleavingString {
             isValid |= find(s1, s2, i1 + 1, i2, s3, validArr);
         }
         if (!isValid && i2 < s2.length() && s2.charAt(i2) == s3.charAt(i1 + i2)) {
-            isValid = find(s1, s2, i1, i2 + 1, s2, validArr);
+            isValid = find(s1, s2, i1, i2 + 1, s3, validArr);
         }
         validArr[i1][i2] = isValid;
         return isValid;
